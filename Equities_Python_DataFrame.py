@@ -1,3 +1,11 @@
+#Title: DataFrame for Equities
+#By: Andrew Tran
+#github repo: https://github.com/tiandrewthh/Snap
+#Description:   This python scripts renames table columns and merges them into one table
+#               Use the github repo to pull directories and files and run python script 
+#               using 'python Equities_Python_DataFrame.py'
+#               Make sure Anaconda and panda has been configured in your environment
+
 import os
 import pandas as pd
 from functools import reduce 
@@ -16,7 +24,7 @@ with os.scandir('Equities/') as entries:
 
 equity = []
 index = 0
-#Inserts csv table data into arrays, renames the columns and concatenates columns using outer join
+#Inserts csv table data into arrays, renames the columns and appends columns using outer join
 while index < len(files):
     equity.insert(index, pd.read_csv(files[index]))
     equity[index] = pd.DataFrame(equity[index], columns= ['Date', 'Close'])
@@ -26,3 +34,5 @@ while index < len(files):
 total_equities = pd.concat(equity, axis=0, sort=False, join='outer')
 #Use print function to test
 #print(total_equities)
+
+
