@@ -17,7 +17,7 @@ with os.scandir('Equities/') as entries:
 
 equity = []
 index = 0
-#Inserts csv table data into arrays, renames the columns and concatenates using outer join
+#Inserts csv table data into arrays, renames the columns and concatenates columns using outer join
 while index < len(files):
     equity.insert(index, pd.read_csv(files[index]))
     equity[index] = pd.DataFrame(equity[index], columns= ['Date', 'Close'])
