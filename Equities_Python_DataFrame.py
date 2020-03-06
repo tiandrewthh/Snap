@@ -2,7 +2,7 @@
 #By: Andrew Tran
 #github repo: https://github.com/tiandrewthh/Snap
 #Description:   This python scripts renames table columns and merges them into one table
-#               Use the github repo to pull directories and files and run python script 
+#               Use the github repo to download directories and files and run python script 
 #               using 'python Equities_Python_DataFrame.py'
 #               Make sure Anaconda and panda has been configured in your environment
 
