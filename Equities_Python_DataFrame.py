@@ -4,7 +4,6 @@ from functools import reduce
 
 #Declaring arrays and int variables
 files = []
-array = [1,2,3,4,5]
 equity_name = []
 index = 0
 
@@ -22,8 +21,8 @@ while index < len(files):
     equity.insert(index, pd.read_csv(files[index]))
     equity[index] = pd.DataFrame(equity[index], columns= ['Date', 'Close'])
     equity[index].rename(columns = {'Close': equity_name[index]}, inplace=True)
-    total_equities = pd.concat(equity, axis=1, sort=False, join='outer')
-    #print (total_equities)
     index += 1
-
-
+    
+total_equities = pd.concat(equity, axis=0, sort=False, join='outer')
+#Use print function to test
+#print(total_equities)
