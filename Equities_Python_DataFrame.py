@@ -1,11 +1,10 @@
 #Title: DataFrame for Equities
 #By: Andrew Tran
 #github repo: https://github.com/tiandrewthh/Snap
-#Description:   This python scripts renames table columns and merges them into one table
+#Description:   This python scripts stores table columns in lists and renames the columns
 #               Use the github repo to download directories and files and run python script 
 #               using 'python Equities_Python_DataFrame.py'
 #               Make sure Anaconda and panda has been configured in your environment
-
 import os
 import pandas as pd
 from functools import reduce 
@@ -32,8 +31,3 @@ while index < len(files):
     #use print to test
     #print(equity[index])
     index += 1
-    
-
-
-
-
