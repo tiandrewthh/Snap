@@ -15,7 +15,7 @@ files = []
 equity_name = []
 index = 0
 
-#Scans the directory for files
+#Scans the directory for files and stores the file directory in an array as well as the file name
 with os.scandir('Equities/') as entries:
     for entry in entries:
         files.insert(index, 'Equities/' + entry.name)
@@ -29,10 +29,10 @@ while index < len(files):
     equity.insert(index, pd.read_csv(files[index]))
     equity[index] = pd.DataFrame(equity[index], columns= ['Date', 'Close'])
     equity[index].rename(columns = {'Close': equity_name[index]}, inplace=True)
+    print(equity[index])
     index += 1
     
-total_equities = pd.concat(equity, axis=0, sort=False, join='outer')
-#Use print function to test
-#print(total_equities)
+
+
 
 
