@@ -29,7 +29,8 @@ while index < len(files):
     equity.insert(index, pd.read_csv(files[index]))
     equity[index] = pd.DataFrame(equity[index], columns= ['Date', 'Close'])
     equity[index].rename(columns = {'Close': equity_name[index]}, inplace=True)
-    print(equity[index])
+    #use print to test
+    #print(equity[index])
     index += 1
     
 
